@@ -67,11 +67,13 @@ function qod_scripts() {
 		wp_localize_script( 'qod-api', 'api_vars', array(
 			'root_url' => esc_url_raw( rest_url() ),
 			'home_url' => esc_url_raw( home_url() ),
+			'post_id' => get_the_ID(),
+			'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
 			'nonce'		 => wp_create_nonce( 'wp_rest' ),
 			'success'  => 'Thanks, your quote submission was rceived!',
 			'failure'	 => 'Your submission could not be processed :('
+			
 		) );
-
 
 	}
 	

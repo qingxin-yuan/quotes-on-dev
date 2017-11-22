@@ -1,6 +1,25 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+.site-main{
+  article{
+    color: white;
+  }
+  &::before{
+    content: '“';
+    font-size: 200px;
+    font-family: $font__main;
+    color: $color__text-secondary;
+  }
+  &::after{
+    content: '”';
+    font-size: 200px;
+    font-family: $font__main;
+    color: $color__text-secondary;
+  }
+}
+
+
 
 /* All Archives Page */
 
