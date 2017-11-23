@@ -12,16 +12,22 @@
       //     xhr.setRequestHeader( 'X-WP-Nonce', api_vars.wpapi_nonce );
       //  }
     }).done( function(data) {
-
+      $('.source').children().text('');
+      $('.comma').text('');
       data = data[0];
       console.log(data);
       console.log(data.title.rendered);
-      console.log(data.slug);
+      console.log(data._qod_quote_source);
       history.pushState(null, null, data.slug);//change the slug of each quote
       $('.entry-content').children().html(data.content.rendered);
       $('.entry-title').text(data.title.rendered).prepend('&mdash;');
-      $('.source').children().text(data._qod_quote_source);
-      $('.source').children().attr('href',data._qod_quote_source_url);
+      
+      if (data._qod_quote_source){
+        $('.source').children().text(data._qod_quote_source);
+        $('.source').children().attr('href',data._qod_quote_source_url);
+        $('.comma').text(', ');
+      }
+      
     });
  });
 

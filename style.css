@@ -306,6 +306,9 @@ mark, ins {
 big {
   font-size: 125%; }
 
+html {
+  max-height: 100vh; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -620,6 +623,8 @@ object {
 --------------------------------------------------------------*/
 .site-main article {
   color: white; }
+  .site-main article .entry-meta h2 {
+    display: inline-block; }
 
 .site-main::before {
   content: '“';

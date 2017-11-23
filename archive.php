@@ -22,8 +22,38 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
-					get_template_part( 'template-parts/content' );
+// get_template_part( 'template-parts/content' );
 				?>
+			<section class="quote-authors">
+				<h2>Quote Authors</h2>
+				<div class="author-names">
+					<?php $args = array(
+						'post_status' => 'publish'
+					);
+					$posts = get_posts($args);
+					foreach($posts as $post):setup_postdata( $post );
+						the_title();
+				
+					
+					
+					endforeach;wp_reset_postdata();
+					?>
+
+
+
+
+				</div>
+
+
+
+
+			</section>
+
+
+
+
+
+
 
 			<?php endwhile; ?>
 
