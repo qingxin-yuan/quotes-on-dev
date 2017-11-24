@@ -1,28 +1,80 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+.main-navigation{
+  display: flex;
+  flex-direction: column;
+  ul {
+    
+    li{
+      margin: 0 15px;
+      a{
+        color: $color__text-secondary;
+      }
+    }
+    .menu-item-238::after{
+      content: "|";
+      color: $color__text-main;
+      position: relative;
+      top: -25px;
+      left: 60px;
+      }
+    .menu-item-236::after{
+      content: "|";
+      color: $color__text-main;
+      position: relative;
+      top: -25px;
+      left: 80px;
+    }
+  }
+  p{
+    margin: 0 15px;
+
+    .footer-link{
+      color: $color__text-secondary;
+    }
+    .footer-uppercase{
+      text-transform: uppercase;
+    }
+  }
+}
 .site-main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
   article{
-    color: white;
+    margin: 5px;
+    color: $color__text-main;
+    width: 80vw;
     .entry-meta{
       h2{
         display: inline-block;
       }
     }
+    @include desktop{
+      &::before{
+        content: '“';
+        font-size: 200px;
+        font-family: $font__main;
+        color: $color__text-secondary;
+        padding: 0;
+        margin: 0;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        top: 50px;
+      }
+      &::after{
+        content: '”';
+        font-size: 200px;
+        font-family: $font__main;
+        color: $color__text-secondary;
+      }
+    }
   }
-  &::before{
-    content: '“';
-    font-size: 200px;
-    font-family: $font__main;
-    color: $color__text-secondary;
-  }
-  &::after{
-    content: '”';
-    font-size: 200px;
-    font-family: $font__main;
-    color: $color__text-secondary;
-  }
-
 }
 
 
