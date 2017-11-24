@@ -14,7 +14,10 @@ get_header();?>
       <header>
         <?php the_title('<h1 class="entry-title">','</h1>')?>
       </header>
-    </section>
+    
+
+    <?php if(is_user_logged_in() && current_user_can( 'edit_posts' )):?>
+
 
     <div class="quote-submission-wrapper">
       <form name="quote-form" id="quote-submission-form">
@@ -39,7 +42,7 @@ get_header();?>
          <input type="url" name="quote_source_url" id="quote-source-url">
        </div>
 
-       <input type="submit" value="Submit Quote">
+       <input type="submit" value="Submit Quote" id="submit-button">
 
       </form>
 
@@ -48,6 +51,13 @@ get_header();?>
 
     </div>
 
+    <?php else:?>
+    <p>None shall post!</p>
+    <p><?php echo sprintf('<a href="%1s">%2s</a>', esc_url( wp_login_url()), 'Click here to login');?></p>
+
+    <?php endif;?>
+
+    </section>
   </main>
 
 
