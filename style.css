@@ -670,8 +670,16 @@ object {
     margin: 5px;
     color: #fff;
     width: 80vw; }
-    .site-main article .entry-meta h2 {
-      display: inline-block; }
+    .site-main article .entry-meta {
+      margin-bottom: 1rem; }
+      .site-main article .entry-meta h2 {
+        display: inline-block;
+        margin: 0; }
+      .site-main article .entry-meta .source {
+        color: #fff; }
+        .site-main article .entry-meta .source a {
+          color: #00cc00;
+          text-decoration: none; }
     @media (min-width: 1080px) {
       .site-main article::before {
         content: '“';

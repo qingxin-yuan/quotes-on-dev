@@ -12,8 +12,8 @@
       //     xhr.setRequestHeader( 'X-WP-Nonce', api_vars.wpapi_nonce );
       //  }
     }).done( function(data) {
-      $('.source').children().text('');
-      $('.comma').text('');
+      $('.source').text('');
+      // $('.comma').text('');
       data = data.shift();
       // console.log(data);
       // console.log(data.title.rendered);
@@ -26,10 +26,11 @@
       $('.entry-title').text(data.title.rendered).prepend('&mdash;');
       
 
-      if (data._qod_quote_source){
-        $('.source').children().text(data._qod_quote_source);
-        $('.source').children().attr('href',data._qod_quote_source_url);
-        $('.comma').text(', ');
+      if (data._qod_quote_source_url && data._qod_quote_source){
+        $('.source').append(', <a href="'+ data._qod_quote_source_url + '">' + data._qod_quote_source + '</a>');
+      }
+      else if (data._qod_quote_source){
+        $('.source').append(', '+ data._qod_quote_source);
       }
       
     })

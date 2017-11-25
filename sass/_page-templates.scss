@@ -50,9 +50,20 @@
     color: $color__text-main;
     width: 80vw;
     .entry-meta{
+      margin-bottom: 1rem;
       h2{
         display: inline-block;
+        margin: 0;
+        // margin-bottom: 1rem;
       }
+      .source{
+        color: $color__text-main;
+        a{
+          color: $color__text-secondary;
+          text-decoration: none;
+        }
+      }
+      
     }
     @include desktop{
       &::before{
