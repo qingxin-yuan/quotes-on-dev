@@ -11,6 +11,7 @@ textarea {
 	font-family: $font__main;
 	font-size: $base_font_size;
 	line-height: $font__line-height-body;
+	box-sizing: border-box;
 }
 
 /* Headings */

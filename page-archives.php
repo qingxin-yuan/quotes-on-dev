@@ -23,7 +23,7 @@ get_header(); ?>
 
 			<section class="quote-authors">
 				<h2>Quote Authors</h2>
-				<p>
+				<ul class="archive-author-list">
 					<?php $args = array(
             // 'post_status' => 'publish'
             'posts_per_page'=>'500',
@@ -33,40 +33,40 @@ get_header(); ?>
 					);
 					$posts = get_posts($args);
 					foreach($posts as $post):setup_postdata( $post );?>
-					<span><a href="<?php echo get_post_permalink()?>"><?php the_title();?></a></span>
+					<li><a href="<?php echo get_post_permalink()?>"><?php the_title();?></a></li>
 					
 					<?php endforeach;wp_reset_postdata();?>
-        </p>
+        </ul>
       </section>
       
       <section class="quote-cats">
 				<h2>Categories</h2>
-				<p>
+				<ul class="archive-cat-list">
 					<?php $args = array(
             'orderby' => 'ASC'
 					);
 					$cats = get_categories($args);
           foreach($cats as $cat):setup_postdata( $cat );?>
 
-          	<span><a href="<?php echo get_category_link(get_cat_ID($cat->name))?>">
-					  <?php echo $cat->name;?></a>  </span>
+          	<li><a href="<?php echo get_category_link(get_cat_ID($cat->name))?>">
+					  <?php echo $cat->name;?></a>  </li>
 					
 					<?php endforeach;wp_reset_postdata();?>
-        </p>
+        </ul>
 			</section>
 
       <section class="quote-tags">
 				<h2>Tags</h2>
-				<p>
+				<ul class="archive-tag-list">
 					<?php $args = array(
             'orderby' => 'ASC'
 					);
 					$tags = get_tags($args);
           foreach($tags as $tag):setup_postdata( $tag );?>
-						<span><a href="<?php echo get_tag_link($tag->term_id)?>"><?php echo $tag->name;?> </a> </span>
+						<li><a href="<?php echo get_tag_link($tag->term_id)?>"><?php echo $tag->name;?> </a> </li>
 					
 					<?php endforeach;wp_reset_postdata();?>
-        </p>
+        </ul>
 			</section>
 
 
