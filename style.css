@@ -615,9 +615,35 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-.site-header .hero {
-  position: relative;
-  left: 20px; }
+.site-header {
+  position: relative; }
+  @media (min-width: 1080px) {
+    .site-header::before {
+      content: '“';
+      font-size: 200px;
+      font-family: "Exo", sans-serif;
+      color: #00cc00;
+      padding: 0;
+      margin: 0;
+      height: 50px;
+      position: absolute;
+      left: 90px;
+      top: 100px; }
+    .site-header::after {
+      content: '”';
+      font-size: 200px;
+      font-family: "Exo", sans-serif;
+      color: #00cc00;
+      position: absolute;
+      left: 900px;
+      top: 100px; } }
+  .site-header .hero {
+    position: relative;
+    left: 20px; }
+
+@media (min-width: 1080px) {
+  .site-content {
+    margin: 50px 20vw; } }
 
 .main-navigation {
   display: -webkit-box;
@@ -700,23 +726,6 @@ object {
           color: #00cc00;
           text-decoration: none;
           font-style: italic; }
-    @media (min-width: 1080px) {
-      .site-main article::before {
-        content: '“';
-        font-size: 200px;
-        font-family: "Exo", sans-serif;
-        color: #00cc00;
-        padding: 0;
-        margin: 0;
-        height: 50px;
-        position: absolute;
-        left: 0;
-        top: 50px; }
-      .site-main article::after {
-        content: '”';
-        font-size: 200px;
-        font-family: "Exo", sans-serif;
-        color: #00cc00; } }
   .site-main #new-quote-button {
     background: none;
     text-shadow: none;
