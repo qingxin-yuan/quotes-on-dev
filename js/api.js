@@ -13,11 +13,8 @@
       //  }
     }).done( function(data) {
       $('.source').text('');
-      // $('.comma').text('');
+ 
       data = data.shift();
-      // console.log(data);
-      // console.log(data.title.rendered);
-      // console.log(data._qod_quote_source);
 
       history.pushState(null, null, data.slug);//change the slug of each quote
 

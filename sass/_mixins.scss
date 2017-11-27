@@ -5,6 +5,19 @@
 	margin-right: auto;
 }
 
+@mixin link{
+	color: $color__text-secondary;
+	text-decoration: none;
+	font-style: italic;
+}
+@mixin button{
+	background: none;
+	text-shadow: none;
+	box-shadow: none;
+	color: $color__text-secondary;
+	border: $border__main;
+}
+
 @mixin tablet {
   @media (min-width: $tablet_width) {
     @content;

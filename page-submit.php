@@ -6,7 +6,6 @@
 
 
 
-
 get_header();?>
 <div id="primary" class="content-area">
   <main id="main" class="site-main">
@@ -23,12 +22,12 @@ get_header();?>
       <form name="quote-form" id="quote-submission-form">
 
        <div>
-         <label for="quote-author">Author of Quote</label>
+         <label for="quote-author" class="quote-author">Author of Quote</label>
          <input type="text" name="quote_author" id="quote-author">
        </div>
 
        <div>
-         <label for="quote-content">Quote</label>
+         <label for="quote-content" class="quote-content">Quote</label>
          <textarea rows="3" cols="20" name="quote_content" id="quote-content"></textarea>
        </div>
 
@@ -62,10 +61,6 @@ get_header();?>
 
 
 </div>
-
-
-
-
 
 
 

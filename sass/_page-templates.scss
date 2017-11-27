@@ -50,7 +50,7 @@
   article{
     margin: 5px;
     color: $color__text-main;
-    width: 80vw;
+    // width: 80vw;
     .entry-meta{
       margin-bottom: 1rem;
       h2{
@@ -61,8 +61,7 @@
       .source{
         color: $color__text-main;
         a{
-          color: $color__text-secondary;
-          text-decoration: none;
+          @include link;
         }
       }
       
@@ -89,15 +88,28 @@
     }
   }
   #new-quote-button{
-    background: none;
-    text-shadow: none;
-    box-shadow: none;
-    color: $color__text-secondary;
-    border: $border__main;
+    @include button;
+  }
+}
+//HOME PAGE AND SINGLE PAGE
+.home,
+.single{
+  .site-main{
+    article{
+    width: 100%;
+    padding-left: 10px;
+    }
+    #new-quote-button{
+      display: block;
+      
+      margin: 0 auto 0 10px;
+      padding: 10px 30px;
+      font-size: 1rem;
+    }
   }
 }
 //ARCHIVES PAGE STYLING
-.page-template-default{
+.page-id-217{
   .page-header{
     width: 100%;
     text-align: left;
@@ -108,9 +120,8 @@
     margin-bottom: 50px;
   }
   a{
-    color: $color__text-secondary;
-    text-decoration: none;
-    
+    @include link;
+    font-style: normal;
   }
   .archive-tag-list,
   .archive-author-list,
@@ -125,6 +136,54 @@
     }
   }
 }
+//CATEGORY AND TAG PAGES
+.category,
+.tag{
+  .site-main{
+    height: auto;
+    margin-bottom: 50px;
+    .page-header{
+      border-bottom: 1px dashed #ffffff;
+      width: 100%;
+      padding-left: 5px;
+    }
+    article{
+      border-bottom: 1px dashed #ffffff;
+      padding-bottom: 30px;
+    }
+  }
+}
 
-
-/* Submit a Quote Page */
+/* About Page */
+.page-id-107{
+  
+  .site-main{
+    height: auto;
+    margin-left: 2px;
+    a{
+      @include link;
+    }
+    
+   
+  }
+  footer{
+    margin-top: 30px;
+  }
+}
+// Submit a Quote Page
+.page-id-111{
+  .site-main{
+    height: auto;
+    .quote-author::after{
+      content: " *";
+      color: red;
+      }
+    .quote-content::after{
+      content: " *";
+      color: red;
+    }
+    #submit-button{
+      @include button;
+    }
+  }
+}

@@ -672,8 +672,7 @@ object {
   height: 60vh; }
   .site-main article {
     margin: 5px;
-    color: #fff;
-    width: 80vw; }
+    color: #fff; }
     .site-main article .entry-meta {
       margin-bottom: 1rem; }
       .site-main article .entry-meta h2 {
@@ -683,7 +682,8 @@ object {
         color: #fff; }
         .site-main article .entry-meta .source a {
           color: #00cc00;
-          text-decoration: none; }
+          text-decoration: none;
+          font-style: italic; }
     @media (min-width: 1080px) {
       .site-main article::before {
         content: '“';
@@ -709,30 +709,84 @@ object {
     color: #00cc00;
     border: 1px #00cc00 solid; }
 
-.page-template-default .page-header {
+.home .site-main article,
+.single .site-main article {
+  width: 100%;
+  padding-left: 10px; }
+
+.home .site-main #new-quote-button,
+.single .site-main #new-quote-button {
+  display: block;
+  margin: 0 auto 0 10px;
+  padding: 10px 30px;
+  font-size: 1rem; }
+
+.page-id-217 .page-header {
   width: 100%;
   text-align: left; }
 
-.page-template-default .site-main {
+.page-id-217 .site-main {
   height: auto;
   margin-left: 10px;
   margin-bottom: 50px; }
 
-.page-template-default a {
+.page-id-217 a {
   color: #00cc00;
-  text-decoration: none; }
+  text-decoration: none;
+  font-style: italic;
+  font-style: normal; }
 
-.page-template-default .archive-tag-list,
-.page-template-default .archive-author-list,
-.page-template-default .archive-cat-list {
+.page-id-217 .archive-tag-list,
+.page-id-217 .archive-author-list,
+.page-id-217 .archive-cat-list {
   list-style-type: none;
   margin: 5px 25px 40px 0;
   margin-right: 25px;
   padding: 0; }
-  .page-template-default .archive-tag-list li,
-  .page-template-default .archive-author-list li,
-  .page-template-default .archive-cat-list li {
+  .page-id-217 .archive-tag-list li,
+  .page-id-217 .archive-author-list li,
+  .page-id-217 .archive-cat-list li {
     display: inline-block;
     margin: 5px 10px; }
 
-/* Submit a Quote Page */
+.category .site-main,
+.tag .site-main {
+  height: auto;
+  margin-bottom: 50px; }
+  .category .site-main .page-header,
+  .tag .site-main .page-header {
+    border-bottom: 1px dashed #ffffff;
+    width: 100%;
+    padding-left: 5px; }
+  .category .site-main article,
+  .tag .site-main article {
+    border-bottom: 1px dashed #ffffff;
+    padding-bottom: 30px; }
+
+/* About Page */
+.page-id-107 .site-main {
+  height: auto;
+  margin-left: 2px; }
+  .page-id-107 .site-main a {
+    color: #00cc00;
+    text-decoration: none;
+    font-style: italic; }
+
+.page-id-107 footer {
+  margin-top: 30px; }
+
+.page-id-111 .site-main {
+  height: auto; }
+  .page-id-111 .site-main .quote-author::after {
+    content: " *";
+    color: red; }
+  .page-id-111 .site-main .quote-content::after {
+    content: " *";
+    color: red; }
+  .page-id-111 .site-main #submit-button {
+    background: none;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: #00cc00;
+    border: 1px #00cc00 solid; }
