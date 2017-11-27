@@ -1,10 +1,20 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
+.site-header{
+  .hero{
+    position: relative;
+    left: 20px;
+  }
+}
 .main-navigation{
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
+  margin-left: 5px;
+  @include tablet{
+    flex-direction: row;
+  }
   ul {
     
     li{
@@ -27,7 +37,18 @@
       top: -25px;
       left: 80px;
     }
+    
   }
+  .menu-main-menu-container{
+    @include tablet{
+      display: inline-block;
+      width: 315px;
+      &::after{
+        content: "|";
+      }
+    }
+  }
+  
   p{
     margin: 0 15px;
 
@@ -37,15 +58,21 @@
     .footer-uppercase{
       text-transform: uppercase;
     }
+    @include tablet{
+      display: inline-block;
+      width: 250px;
+      margin: 0 5px;
+    }
   }
 }
 .site-main{
   padding-top: 20px;
+  margin-left: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
+  // width: 95vw;
   height: 60vh;
   article{
     margin: 5px;
@@ -66,6 +93,7 @@
       }
       
     }
+    
     @include desktop{
       &::before{
         content: '“';
@@ -100,11 +128,7 @@
     padding-left: 10px;
     }
     #new-quote-button{
-      display: block;
-      
-      margin: 0 auto 0 10px;
-      padding: 10px 30px;
-      font-size: 1rem;
+      @include button
     }
   }
 }
@@ -135,6 +159,11 @@
       margin: 5px 10px;
     }
   }
+  @include tablet{
+    h1,h2{
+      margin-left: 10px;
+    }
+  }
 }
 //CATEGORY AND TAG PAGES
 .category,
@@ -144,12 +173,24 @@
     margin-bottom: 50px;
     .page-header{
       border-bottom: 1px dashed #ffffff;
-      width: 100%;
+      width: 95vw;
       padding-left: 5px;
     }
     article{
       border-bottom: 1px dashed #ffffff;
       padding-bottom: 30px;
+      width: 95vw;
+      margin: 0 10px;
+    }
+    .number-pagination{
+      width: 95vw;
+      margin: 20px 0;
+      .page-numbers{
+        padding: 0 5px;
+        @include link;
+        font-style: normal;
+        
+      }
     }
   }
 }
@@ -159,12 +200,10 @@
   
   .site-main{
     height: auto;
-    margin-left: 2px;
+    // margin-left: 2px;
     a{
       @include link;
     }
-    
-   
   }
   footer{
     margin-top: 30px;
@@ -173,7 +212,11 @@
 // Submit a Quote Page
 .page-id-111{
   .site-main{
+    // width: 95vw;
     height: auto;
+    section{
+      width: 95vw;
+    }
     .quote-author::after{
       content: " *";
       color: red;
